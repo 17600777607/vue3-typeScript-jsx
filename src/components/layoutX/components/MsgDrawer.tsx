@@ -48,9 +48,9 @@ export default defineComponent({
     const slots = {
       title: () => <span>消息中心</span>
     };
-    function msgNotIcon() {
+    const msgNotIcon = () => {
       return <i class="el-icon-s-comment" />;
-    }
+    };
     const msgHasIcon = () => {
       return <i class="el-icon-view" />;
     };
@@ -71,7 +71,7 @@ export default defineComponent({
                 <div style="border-bottom: 1px solid #efefef;font-size: 14px">
                   <div style="display: flex">
                     <div style="flex: 1;color: #6374c2">
-                      {item.status === 0 ? msgNotIcon : msgHasIcon}
+                      {item.status === 0 ? msgNotIcon() : msgHasIcon()}
                       {item.title}
                       <div style="color: rgba(0, 0, 0, 0.54);float:right">
                         {item.time}
