@@ -7,5 +7,5 @@ jsx    @vue/babel-plugin-jsx
 ## main.ts 项目入口
 ###  app.tsx 
 ```
-layout 封装   slots
+layoutX 封装   slots 上中下布局
 ```

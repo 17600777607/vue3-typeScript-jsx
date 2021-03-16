@@ -13,3 +13,14 @@ html,body,p{
 body,html,#app{
   height: 100%;
 }
+//el-drawer
+.el-drawer {
+  .el-drawer__header{
+    border-bottom: 1px solid #efefef;
+    padding: 10px 20px;
+    margin-bottom: 0;
+  }
+  .el-drawer__body{
+    padding:10px;
+  }
+}

@@ -1,11 +1,13 @@
 import { defineComponent } from "vue";
 import LayoutX from "@/components/layoutX/Index";
+import HeaderBox from "@/components/layoutX/components/HeaderBox";
+import FooterBox from "@/components/layoutX/components/FooterBox";
 export default defineComponent({
-  components: { LayoutX },
   setup() {
     const slots = {
-      headerBox: () => <span>头部</span>,
-      routerBox: () => <router-view />
+      headerBox: () => <HeaderBox />,
+      routerBox: () => <router-view />,
+      footerBox: () => <FooterBox />
     };
     return () => {
       return <LayoutX v-slots={slots} />;

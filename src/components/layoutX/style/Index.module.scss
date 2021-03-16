@@ -3,7 +3,36 @@
 }
 .headerBox{
   border-bottom: 1px solid #efefef;
-  line-height: 60px;
+  position: relative;
+  padding: 0;
+  .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 60px;
+    padding: 14px;
+    box-sizing: border-box;
+    img{
+      width: 100%;
+    }
+  }
+  .leftBox{
+    position: absolute;
+    top: 0;
+    left: 240px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .rightBox{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    height: 60px;
+    .msgStyle{
+      cursor: pointer;
+    }
+  }
 }
 .mainBox{
   background: #efefef;
