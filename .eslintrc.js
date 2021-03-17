@@ -20,6 +20,7 @@ module.exports = {
     "no-unused-vars": "off", //定义了但未使用的变量
     "no-redeclare": "off", //重复声明的变量
     "no-empty": "off", //块语句中的内容不能为空
-    "@typescript-eslint/no-var-requires": 0
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-explicit-any": ["off"]
   }
 };

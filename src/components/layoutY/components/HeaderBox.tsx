@@ -1,6 +1,5 @@
 import { defineComponent, reactive } from "vue";
-import MsgDrawer from "@/components/layoutX/components/MsgDrawer";
-import { useRouter } from "vue-router";
+import MsgDrawer from "@/components/layoutY/components/MsgDrawer";
 const style = require("../style/Index.module.scss");
 export default defineComponent({
   setup() {
@@ -15,14 +14,6 @@ export default defineComponent({
         roles: ["超级管理员", "管理员"]
       }
     });
-    const router = useRouter();
-
-    const handleJump = () => {
-      const routeUrl = router.resolve({
-        path: "/menuManager"
-      });
-      window.open(routeUrl.href, "_blank");
-    };
     const handlerOpen = () => {
       state.visible = true;
     };
@@ -32,7 +23,7 @@ export default defineComponent({
     const slots = {
       reference: () => {
         return (
-          <el-avatar style="cursor: pointer" size="large" src={state.url} />
+          <el-avatar style="cursor: pointer;" size="large" src={state.url} />
         );
       },
       default: () => {
@@ -46,7 +37,7 @@ export default defineComponent({
                 </el-space>
               </p>
               <p class={style.systemSettings}>
-                <el-space size={10} onClick={handleJump}>
+                <el-space size={10}>
                   <i class="el-icon-setting" />
                   后台管理
                 </el-space>
@@ -77,7 +68,7 @@ export default defineComponent({
           <div class={style.leftBox}>菜单</div>
           <div class={style.rightBox}>
             <el-space style="height: 60px" size={20}>
-              <el-badge value={msgValue} class={style.msgStyle}>
+              <el-badge size="large" value={msgValue} class={style.msgStyle}>
                 <i onClick={handlerOpen} class="el-icon-message-solid" />
               </el-badge>
               <el-popover

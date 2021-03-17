@@ -1,4 +1,4 @@
-.layoutXBox{
+.layoutYBox{
   height: 100%;
 }
 .headerBox{
@@ -36,10 +36,14 @@
 }
 .mainBox{
   background: #efefef;
+  .asideBox{
+    background: #ffffff;
+  }
 }
 .footerBox{
   border-top: 1px solid #efefef;
   line-height: 60px;
+  background: #fff;
 }
 .popoverBox{
   padding: 0 !important;
